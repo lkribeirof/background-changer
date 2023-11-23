@@ -7,17 +7,28 @@
 //     'src/img/mirage.jpg',
 // ];
 
-let timer = 10;
+
+
+const restart = document.getElementById('restart');
+
+let timer = 2;
 let timerId
 
 function decreaseTimer() {
+
+    
+
     if (timer > 0) {
         timerId = setTimeout(decreaseTimer, 1000)
         timer --
         document.querySelector('#timer').innerHTML = timer
-    }
-    if (timer === 0) {
         
+        
+    }
+    if (timer === 0 ) {
+        main.style.backgroundImage = "url('src/img/vitoria.png')";
+        main.style.transition = "all 0.5s";
+        restart.style.display = "block";
     }
 }
 
@@ -44,7 +55,7 @@ document.getElementById('profiles2').addEventListener('click', function(){
 
 document.getElementById('profiles3').addEventListener('click', function(){
     let backgroundImage = document.getElementById('main');
-    main.style.backgroundImage = "url('src/img/dust.jpg')";
+    main.style.backgroundImage = "url('src/img/nuke.jpg')";
 });
 
 document.getElementById('profiles4').addEventListener('click', function(){
@@ -59,12 +70,12 @@ document.getElementById('profiles5').addEventListener('click', function(){
 
 document.getElementById('profiles6').addEventListener('click', function(){
     let backgroundImage = document.getElementById('main');
-    main.style.backgroundImage = "url('src/img/nuke.jpg')";
+    main.style.backgroundImage = "url('src/img/overpass.jpg')";
 });
 
 document.getElementById('profiles7').addEventListener('click', function(){
     let backgroundImage = document.getElementById('main');
-    main.style.backgroundImage = "url('src/img/overpass.jpg')";
+    main.style.backgroundImage = "url('src/img/dust.jpg')";
 });
 
 document.getElementById('profiles8').addEventListener('click', function(){

@@ -10,16 +10,17 @@
 #main {
     display: flex;
     justify-content: space-around;
-    background-image: url('');
+    background-image: url('/src/img/telainicio.jpg');
     height: 100vh;
     background-repeat: no-repeat;
     background-size:cover;
     transition: all 1s;
+    background-position: center;
 }
 #container {
     margin-top: 2.5rem;
     display: flex;
-    background-color: rgb(49, 197, 49);
+    /* background-color: rgb(49, 197, 49); */
     width: 90%;
     height: 100px;
 }
@@ -27,16 +28,17 @@
 .mapas {
     position: relative;
     display: flex;
-    background-color: black;
+    /* background-color: black; */
     width: 45%;
     justify-content: center;
+   
 }
 
 
 .mapas_2 {
     position: relative;
     display: flex;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     width: 45%;
     justify-content: center;
 }
@@ -59,9 +61,30 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 5px;
 }
 
 .profiles:hover {
     cursor: pointer;
     scale: 1.5;
+}
+
+#restart {
+    position: absolute;
+    justify-self: center;
+    align-self: center;
+    display: none;
+}
+
+#restart button {
+    background-color: seagreen;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+#restart button:hover {
+    background-color: rgb(82, 199, 82);
 }
