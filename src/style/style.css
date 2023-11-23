@@ -7,13 +7,14 @@
     font-weight: 600;
 }
 
-main {
+#main {
     display: flex;
     justify-content: space-around;
-    background-image: url(/src/img/ancient.jpg);
+    background-image: url('');
     height: 100vh;
     background-repeat: no-repeat;
     background-size:cover;
+    transition: all 1s;
 }
 #container {
     margin-top: 2.5rem;
@@ -40,7 +41,7 @@ main {
     justify-content: center;
 }
 
-.tempo {
+#timer {
     display: flex;
     background-color: blue;
     width: 10%;
