@@ -1,28 +1,17 @@
-// let imageUrls = [
-//     'src/img/ancient.jpg',
-//     'src/img/anubis.jpg',
-//     'src/img/cache.jpg',
-//     'src/img/dust.jpg',
-//     'src/img/inferno.jpg',
-//     'src/img/mirage.jpg',
-// ];
-
-
-
+const inicio = document.getElementById('inicio');
+const sidebar = document.getElementById('sidebar');
 const restart = document.getElementById('restart');
 
-let timer = 2;
+let timer = 60;
 let timerId
 
 function decreaseTimer() {
-
-    
 
     if (timer > 0) {
         timerId = setTimeout(decreaseTimer, 1000)
         timer --
         document.querySelector('#timer').innerHTML = timer
-        
+        container.style.display = "flex";
         
     }
     if (timer === 0 ) {
@@ -32,9 +21,18 @@ function decreaseTimer() {
     }
 }
 
-decreaseTimer();
+// decreaseTimer();
 
+iniciar();
 
+function iniciar () {
+    document.getElementById('start').addEventListener('click', function(){
+    decreaseTimer();
+    
+    inicio.style.display = "none";
+    sidebar.style.display = "none";
+    });
+}
 
 
 
