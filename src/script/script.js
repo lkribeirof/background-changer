@@ -1,6 +1,9 @@
 const inicio = document.getElementById('inicio');
 const sidebar = document.getElementById('sidebar');
 const restart = document.getElementById('restart');
+const navbar = document.getElementById('navbar');
+
+
 
 let timer = 60;
 let timerId
@@ -31,6 +34,10 @@ function iniciar () {
     
     inicio.style.display = "none";
     sidebar.style.display = "none";
+    navbar.style.display = "none";
+
+    main.style.backgroundImage = "url('src/img/carregamento.jpg')";
+
     });
 }
 
