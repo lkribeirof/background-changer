@@ -2,10 +2,10 @@ const inicio = document.getElementById('inicio');
 const sidebar = document.getElementById('sidebar');
 const restart = document.getElementById('restart');
 const navbar = document.getElementById('navbar');
+const container_armas = document.getElementById('container-armas');
+const inventario_cs = document.getElementById('inventario');
 
-
-
-let timer = 60;
+let timer = 5;
 let timerId
 
 function decreaseTimer() {
@@ -24,8 +24,8 @@ function decreaseTimer() {
     }
 }
 
-// decreaseTimer();
 
+inventario();
 iniciar();
 
 function iniciar () {
@@ -35,8 +35,18 @@ function iniciar () {
     inicio.style.display = "none";
     sidebar.style.display = "none";
     navbar.style.display = "none";
+    container_armas.style.display = "block";
 
     main.style.backgroundImage = "url('src/img/carregamento.jpg')";
+
+    });
+}
+
+function inventario () {
+    document.getElementById('link-inventario').addEventListener('click', function(){
+
+        sidebar.style.display = "none";
+        inventario_cs.style.display = "flex";
 
     });
 }
