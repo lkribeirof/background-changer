@@ -4,6 +4,7 @@ const restart = document.getElementById('restart');
 const navbar = document.getElementById('navbar');
 const container_armas = document.getElementById('container-armas');
 const inventario_cs = document.getElementById('inventario');
+const navbar_inventario = document.getElementById('navbar-inventario');
 
 let timer = 5;
 let timerId
@@ -36,6 +37,10 @@ function iniciar () {
     sidebar.style.display = "none";
     navbar.style.display = "none";
     container_armas.style.display = "block";
+    inventario_cs.style.display = "none";
+    navbar_inventario.style.display = "none";
+
+
 
     main.style.backgroundImage = "url('src/img/carregamento.jpg')";
 
