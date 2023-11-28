@@ -5,6 +5,7 @@ const navbar = document.getElementById('navbar');
 const container_armas = document.getElementById('container-armas');
 const inventario_cs = document.getElementById('inventario');
 const navbar_inventario = document.getElementById('navbar-inventario');
+const todos_nav = document.getElementById('todos-nav');
 
 let timer = 5;
 let timerId
@@ -39,6 +40,7 @@ function iniciar () {
     container_armas.style.display = "block";
     inventario_cs.style.display = "none";
     navbar_inventario.style.display = "none";
+    todos_nav.style.display = "none";
 
 
 
@@ -52,6 +54,7 @@ function inventario () {
 
         sidebar.style.display = "none";
         inventario_cs.style.display = "flex";
+        main.style.backgroundColor = "rgba(0, 0, 0, 0.474)";
 
     });
 }
